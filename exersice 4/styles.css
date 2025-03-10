@@ -1,0 +1,142 @@
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+h1 {
+    color: aliceblue;
+    font-family: monospace;
+}
+
+body {
+    background-color: rgb(84, 241, 255);
+    background-image: url(images/beachbackground.gif);
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: background-image 0.5s ease-in-out;
+}
+
+#seagull, #drink, #beachball {
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 10;
+}
+
+#seagull {
+    top: 50px;
+    left: -150px;
+    width: 150px;
+    height: 150px;
+    background-image: url(./images/seagul.gif);
+    animation: fly 10s linear infinite;
+}
+
+#drink {
+    top: 350px;
+    right: 0px;
+    width: 300px;
+    height: 150px;
+    background-image: url(./images/pngtree-drink-in-coconut-with-pixel-art-style-png-image_12644400.png);
+}
+
+#beachball {
+    bottom: 0;
+    left: 0;
+    width: 150px;
+    height: 150px;
+    background-image: url(./images/beach-ball-pixel-art-free-png.png);
+    background-size: cover;
+    background-repeat: repeat-x;
+    animation: ballMove 5s ease-in-out infinite alternate;
+}
+
+/*----animations----*/
+@keyframes fly {
+    0% { left: -100px; }
+    100% { left: 120%; }
+}
+
+@keyframes ballMove {
+    0% { left: -100px; }
+    100% { left: 120%; }
+}
+
+/*----underwater section----*/
+#underwater {
+    position: relative;
+    height: 100vh;
+}
+
+@media screen and (max-width: 800px) {
+    body {
+        background-image: url(./images/underwaterbackgorund.jpg);
+    }
+
+    #seagull, #beachball, #drink, h1 {
+        display: none;
+    }
+
+    #clownfish {
+        position: absolute;
+        top: 25%;
+        left: 5%;
+        width: 120px;
+        height: 200px;
+        background-image: url(./images/clownfish.webp);
+        background-repeat: no-repeat;
+        background-size: contain;
+        z-index: 4;
+    }
+
+    #coral {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 150px;
+        height: 150px;
+        background-image: url(./images/coral.png);
+        background-size: contain;
+        z-index: 3;
+    }
+
+    #seaturtle {
+        position: absolute;
+        top: 5%;
+        right: 5%;
+        width: 150px;
+        height: 150px;
+        background-image: url(./images/seaturtle.png);
+        background-size: contain;
+        z-index: 6;
+        background-repeat: no-repeat;
+    }
+
+    #refreshing-text {
+        display: block;
+        text-align: center;
+        font-size: 32px;
+        color: white;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 10;
+    }
+}
+
+#snorkler {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 120px;
+    height: 200px;
+    background-image: url(./images/snorkler.gif);
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 10;
+    transform: translate(-50%, -50%);
+}
+
